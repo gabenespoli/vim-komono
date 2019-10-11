@@ -13,16 +13,15 @@
 "   let g:komono_todo_dir = '<C-k>'
 " endif
 
+function KomonoNotesToday()
+  execute 'edit '.expand('~').'/notes/'.strftime("%Y-%m-%d").'.txt'
+endfunction
+
 " open notes
 nnoremap <C-k><C-n> :edit ~/notes/temp.txt<CR>
 nnoremap <C-k>-     :edit ~/notes<CR>
 nnoremap <C-k><C-o> :edit ~/notes/<C-d>
 nnoremap <C-k><C-p> :CtrlP ~/notes/<CR>
-
-" open today's journal
-function KomonoNotesToday()
-  execute 'edit '.expand('~').'/notes/'.strftime("%Y-%m-%d").'.txt'
-endfunction
 nnoremap <C-k><C-j> :call KomonoNotesToday()<CR>
 nnoremap <C-k><CR>  :call KomonoNotesToday()<CR>
 
