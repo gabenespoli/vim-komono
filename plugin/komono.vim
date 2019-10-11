@@ -20,8 +20,11 @@ nnoremap <C-k><C-o> :edit ~/notes/<C-d>
 nnoremap <C-k><C-p> :CtrlP ~/notes/<CR>
 
 " open today's journal
-nnoremap <C-k><C-j> :edit ~/notes/<C-R>=strftime("%Y-%m-%d")<CR>.txt<CR>
-nnoremap <C-k><CR>  :edit ~/notes/<C-R>=strftime("%Y-%m-%d")<CR>.txt<CR>
+function KomonoNotesToday()
+  execute 'edit '.expand('~').'/notes/'.strftime("%Y-%m-%d").'.txt'
+endfunction
+nnoremap <C-k><C-j> :call KomonoNotesToday()<CR>
+nnoremap <C-k><CR>  :call KomonoNotesToday()<CR>
 
 " open todo files
 nnoremap <C-k><C-t> :edit ~/notes/todo.txt<CR>
