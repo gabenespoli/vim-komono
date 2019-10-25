@@ -13,6 +13,10 @@
 "   let g:komono_todo_dir = '<C-k>'
 " endif
 
+if !exists('g:komono_todo_file')
+  let g:komono_todo_file = '~/todo/todo.txt'
+endif
+
 function KomonoNotesToday()
   execute 'edit '.expand('~').'/notes/'.strftime("%Y-%m-%d").'.txt'
 endfunction
