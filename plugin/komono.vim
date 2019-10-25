@@ -17,7 +17,21 @@ function KomonoNotesToday()
   execute 'edit '.expand('~').'/notes/'.strftime("%Y-%m-%d").'.txt'
 endfunction
 
-" open notes
+function KomonoTodoToggle()
+  if bufwinnr(g:komono_todo_file) > 0
+    execute "silent sort"
+    execute "write"
+    execute "bwipeout ".bufnr(g:komono_todo_file)
+  else
+    execute "botright 15 split ".g:komono_todo_file.""
+    execute "silent sort"
+    normal gg
+    execute "write"
+    set winfixheight
+  endif
+endfunction
+
+" Notes:
 nnoremap <C-k><C-n> :edit ~/notes/temp.txt<CR>
 nnoremap <C-k>-     :edit ~/notes<CR>
 nnoremap <C-k><C-o> :edit ~/notes/<C-d>
@@ -29,6 +43,7 @@ nnoremap <C-k><CR>  :call KomonoNotesToday()<CR>
 nnoremap <C-k><C-t> :edit ~/notes/todo.txt<CR>
 nnoremap <C-k><C-b> :edit ~/notes/backlog.txt<CR>
 nnoremap <C-k><C-s> :edit ~/notes/someday.txt<CR>
+nnoremap <C-k><C-k> :call KomonoTodoToggle()<CR>
 
 " paste dates
 nnoremap <C-k>Di "=strftime("%Y-%m-%d")<CR>P
