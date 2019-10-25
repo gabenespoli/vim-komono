@@ -39,13 +39,13 @@ nnoremap <C-k><C-p> :CtrlP ~/notes/<CR>
 nnoremap <C-k><C-j> :call KomonoNotesToday()<CR>
 nnoremap <C-k><CR>  :call KomonoNotesToday()<CR>
 
-" open todo files
+" Todo:
 nnoremap <C-k><C-t> :edit ~/notes/todo.txt<CR>
 nnoremap <C-k><C-b> :edit ~/notes/backlog.txt<CR>
 nnoremap <C-k><C-s> :edit ~/notes/someday.txt<CR>
 nnoremap <C-k><C-k> :call KomonoTodoToggle()<CR>
 
-" paste dates
+" Dates:
 nnoremap <C-k>Di "=strftime("%Y-%m-%d")<CR>P
 nnoremap <C-k>Da "=strftime("%Y-%m-%d")<CR>p
 nnoremap <C-k>DI "=strftime("%Y-%m-%d %H:%M:%S")<CR>P
