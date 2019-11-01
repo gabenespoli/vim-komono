@@ -23,6 +23,7 @@ endfunction
 
 function KomonoTodoToggle()
   if bufwinnr(g:komono_todo_file) > 0
+    execute bufwinnr(g:komono_todo_file)."wincmd w"
     execute "silent sort"
     execute "write"
     execute "bwipeout ".bufnr(g:komono_todo_file)
