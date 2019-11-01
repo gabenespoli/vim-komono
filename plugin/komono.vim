@@ -28,7 +28,7 @@ function KomonoTodoToggle()
     execute "write"
     execute "bwipeout ".bufnr(g:komono_todo_file)
   else
-    execute "botright 15 split ".g:komono_todo_file.""
+    execute "topleft 15 split ".g:komono_todo_file.""
     execute "silent sort"
     normal gg
     execute "write"
