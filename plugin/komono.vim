@@ -45,9 +45,9 @@ nnoremap <C-k><C-j> :call KomonoNotesToday()<CR>
 nnoremap <C-k><CR>  :call KomonoNotesToday()<CR>
 
 " Todo:
-nnoremap <C-k><C-t> :edit ~/notes/todo.txt<CR>
-nnoremap <C-k><C-b> :edit ~/notes/backlog.txt<CR>
-nnoremap <C-k><C-s> :edit ~/notes/someday.txt<CR>
+nnoremap <C-k><C-t> :edit ~/todo/todo.txt<CR>
+nnoremap <C-k><C-b> :edit ~/todo/backlog.txt<CR>
+nnoremap <C-k><C-s> :edit ~/todo/someday.txt<CR>
 nnoremap <C-k><C-k> :call KomonoTodoToggle()<CR>
 
 " Dates:
