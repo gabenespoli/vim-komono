@@ -6,11 +6,11 @@
 " endif
 
 " if !exists('g:komono_notes_dir')
-"   let g:komono_notes_dir = '~/notes'
+"   let g:komono_notes_dir = expand('~/notes')
 " endif
 
 " if !exists('g:komono_todo_dir')
-"   let g:komono_todo_dir = '~/todo'
+"   let g:komono_todo_dir = expand('~/todo')
 " endif
 
 if !exists('g:komono_todo_file')
