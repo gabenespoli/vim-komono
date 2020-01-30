@@ -45,10 +45,11 @@ nnoremap <C-k><C-j> :call KomonoNotesToday()<CR>
 nnoremap <C-k><CR>  :call KomonoNotesToday()<CR>
 
 " Todo:
-nnoremap <C-k><C-t> :edit ~/todo/todo.txt<CR>
-nnoremap <C-k><C-b> :edit ~/todo/backlog.txt<CR>
-nnoremap <C-k><C-s> :edit ~/todo/someday.txt<CR>
 nnoremap <C-k><C-k> :call KomonoTodoToggle()<CR>
+nnoremap <C-k>t :edit ~/todo/todo.txt<CR>
+nnoremap <C-k>b :edit ~/todo/backlog.txt<CR>
+nnoremap <C-k>s :edit ~/todo/someday.txt<CR>
+nnoremap <C-k>d :edit ~/todo/done.txt<CR>
 
 " Dates:
 nnoremap <C-k>Di "=strftime("%Y-%m-%d")<CR>P
